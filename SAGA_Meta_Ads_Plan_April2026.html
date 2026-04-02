@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SAGA - Sriperumbudur | Meta Ads Plan - April 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #e94560;
+            --accent-light: #ff6b6b;
+            --gold: #f0a500;
+            --gold-light: #ffc947;
+            --success: #00b894;
+            --warning: #fdcb6e;
+            --danger: #e17055;
+            --info: #74b9ff;
+            --dark: #0a0a1a;
+            --light: #f8f9fa;
+            --card-bg: #ffffff;
+            --gradient-primary: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            --gradient-accent: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            --gradient-gold: linear-gradient(135deg, #f0a500 0%, #ffc947 100%);
+            --gradient-success: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.15);
+            --shadow-xl: 0 12px 60px rgba(0,0,0,0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(233,69,96,0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(240,165,0,0.1) 0%, transparent 50%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient-accent);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .hero h1 span { color: var(--gold); }
+        .hero .subtitle {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-meta-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .hero-meta-item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+        .hero-meta-item .value { font-size: 1.1rem; font-weight: 700; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Section Styles */
+        .section {
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        .section-header .section-sub {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+        .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* KPI Grid */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .kpi-card {
+            background: white;
+            border-radius: 14px;
+            padding: 22px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+        .kpi-card.red::before { background: var(--gradient-accent); }
+        .kpi-card.gold::before { background: var(--gradient-gold); }
+        .kpi-card.green::before { background: var(--gradient-success); }
+        .kpi-card.blue::before { background: linear-gradient(135deg, #0984e3, #74b9ff); }
+        .kpi-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #888; font-weight: 600; }
+        .kpi-value { font-size: 1.8rem; font-weight: 900; color: var(--primary); margin: 6px 0; }
+        .kpi-sub { font-size: 0.78rem; color: #aaa; }
+
+        /* Status badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge-danger { background: #ffeaea; color: #e94560; }
+        .badge-warning { background: #fff8e1; color: #f0a500; }
+        .badge-success { background: #e8f8f5; color: #00b894; }
+        .badge-info { background: #e8f4fd; color: #0984e3; }
+
+        /* Tables */
+        .data-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 12px;
+        }
+        .data-table th {
+            background: var(--primary);
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .data-table th:first-child { border-radius: 10px 0 0 0; }
+        .data-table th:last-child { border-radius: 0 10px 0 0; }
+        .data-table td {
+            padding: 12px 16px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .data-table tr:hover td { background: #f8f9ff; }
+        .data-table tr:last-child td:first-child { border-radius: 0 0 0 10px; }
+        .data-table tr:last-child td:last-child { border-radius: 0 0 10px 0; }
+
+        /* Grid layouts */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(480px, 1fr)); gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+
+        /* Progress bars */
+        .progress-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        /* Alert boxes */
+        .alert {
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.88rem;
+        }
+        .alert-danger { background: #fff0f0; border-left: 4px solid var(--accent); }
+        .alert-warning { background: #fff8e1; border-left: 4px solid var(--gold); }
+        .alert-success { background: #e8f8f5; border-left: 4px solid var(--success); }
+        .alert-info { background: #e8f4fd; border-left: 4px solid #0984e3; }
+        .alert-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* Campaign structure */
+        .campaign-tree {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px;
+            font-family: 'Inter', monospace;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+        .tree-campaign { font-weight: 700; color: var(--primary); }
+        .tree-adset { color: #0984e3; margin-left: 24px; }
+        .tree-ad { color: #00b894; margin-left: 48px; }
+        .tree-icon { margin-right: 6px; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 30px; }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent), var(--gold), var(--success));
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 24px;
+            padding: 16px 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 22px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            background: white;
+        }
+        .timeline-date { font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .timeline-title { font-weight: 700; color: var(--primary); margin: 4px 0; }
+        .timeline-desc { font-size: 0.85rem; color: #666; }
+
+        /* Ad copy cards */
+        .ad-copy-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+        }
+        .ad-copy-header {
+            padding: 14px 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: white;
+        }
+        .ad-copy-body { padding: 20px; }
+        .ad-copy-body .primary-text { font-size: 0.88rem; color: #333; line-height: 1.7; margin-bottom: 12px; }
+        .ad-copy-body .headline { font-size: 1.05rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+        .ad-copy-body .description { font-size: 0.82rem; color: #888; }
+        .ad-copy-body .cta-btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 20px;
+            background: var(--gradient-accent);
+            color: white;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            font-size: 0.82rem;
+        }
+        .footer strong { color: var(--gold); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero { padding: 40px 20px; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero-meta { gap: 12px; }
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, #1a1a2e, #0f3460);
+            color: white;
+            border-radius: 16px;
+            padding: 28px;
+            margin: 16px 0;
+        }
+        .highlight-box h3 { color: var(--gold); margin-bottom: 12px; }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f2f5;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #555;
+            margin: 2px;
+        }
+
+        /* Competitor comparison */
+        .compare-row {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .compare-label { width: 160px; font-weight: 600; font-size: 0.85rem; color: #555; }
+        .compare-us { flex: 1; font-weight: 700; color: var(--success); font-size: 0.88rem; }
+        .compare-them { flex: 1; color: #888; font-size: 0.88rem; }
+    </style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">🏗️ Performance Marketing Plan</div>
+        <h1>THE SAGA — <span>Sriperumbudur</span></h1>
+        <p class="subtitle">Meta Ads Lead Generation Strategy | April 2026<br>Propshell Real Estate Marketing</p>
+        <div class="hero-meta">
+            <div class="hero-meta-item">
+                <div class="label">Daily Budget</div>
+                <div class="value">₹6,000</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="label">Monthly Budget</div>
+                <div class="value">₹1,80,000</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="label">Target CPL</div>
+                <div class="value">₹300 – ₹350</div>
+            </div>
+            <div class="hero-meta-item">
+                <div class="label">Est. Monthly Leads</div>
+                <div class="value">514 – 600</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== CURRENT ACCOUNT AUDIT ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-accent);">📊</div>
+        <div>
+            <h2>Current Account Audit</h2>
+            <div class="section-sub">Windsor.ai Data — SAGA Account (March 16 – April 2, 2026)</div>
+        </div>
+    </div>
+
+    <div class="kpi-grid" style="margin-bottom: 20px;">
+        <div class="kpi-card red">
+            <div class="kpi-label">Total Spend</div>
+            <div class="kpi-value">₹23,196</div>
+            <div class="kpi-sub">17 days active</div>
+        </div>
+        <div class="kpi-card gold">
+            <div class="kpi-label">Avg. Daily Spend</div>
+            <div class="kpi-value">₹1,365</div>
+            <div class="kpi-sub">Target: ₹6,000/day</div>
+        </div>
+        <div class="kpi-card blue">
+            <div class="kpi-label">Total Impressions</div>
+            <div class="kpi-value">80.5K</div>
+            <div class="kpi-sub">Reach: 39,274</div>
+        </div>
+        <div class="kpi-card green">
+            <div class="kpi-label">Total Clicks</div>
+            <div class="kpi-value">1,789</div>
+            <div class="kpi-sub">CTR: 2.22%</div>
+        </div>
+        <div class="kpi-card gold">
+            <div class="kpi-label">Avg. CPC</div>
+            <div class="kpi-value">₹12.97</div>
+            <div class="kpi-sub">Good for real estate</div>
+        </div>
+        <div class="kpi-card blue">
+            <div class="kpi-label">CPM</div>
+            <div class="kpi-value">₹288</div>
+            <div class="kpi-sub">Industry avg: ₹200-400</div>
+        </div>
+        <div class="kpi-card red">
+            <div class="kpi-label">Frequency</div>
+            <div class="kpi-value">2.05</div>
+            <div class="kpi-sub">⚠️ High for 17 days</div>
+        </div>
+        <div class="kpi-card red">
+            <div class="kpi-label">Leads Tracked</div>
+            <div class="kpi-value">0</div>
+            <div class="kpi-sub">❌ No conversion data</div>
+        </div>
+    </div>
+
+    <!-- Current Structure -->
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title">🏗️ Current Campaign Structure</div>
+            <div class="campaign-tree">
+                <div class="tree-campaign"><span class="tree-icon">📂</span> Saga LG 16.03.2026 (Lead Gen)</div>
+                <div class="tree-adset"><span class="tree-icon">📁</span> Adset 1000 (Single audience)</div>
+                <div class="tree-ad"><span class="tree-icon">📄</span> Ads 1creative (Image) — CTR: 0.74% ❌</div>
+                <div class="tree-ad"><span class="tree-icon">📄</span> Ads 2 Video — CTR: 2.46% ✅</div>
+            </div>
+            <div style="margin-top: 16px;">
+                <div class="alert alert-danger">
+                    <span class="alert-icon">🚨</span>
+                    <div><strong>Critical:</strong> Only 1 campaign, 1 ad set, 2 ads. Zero audience segmentation. No A/B testing structure. Image ad burning budget at 0.74% CTR.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📈 Ad Performance Breakdown</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Spend</th>
+                        <th>CTR</th>
+                        <th>CPC</th>
+                        <th>Verdict</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Ads 1creative</strong><br><span style="color:#888;font-size:0.75rem;">Image Ad</span></td>
+                        <td>₹1,731</td>
+                        <td style="color: var(--danger); font-weight: 700;">0.74%</td>
+                        <td>₹21.37</td>
+                        <td><span class="badge badge-danger">Kill</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ads 2 Video</strong><br><span style="color:#888;font-size:0.75rem;">Video Ad</span></td>
+                        <td>₹21,464</td>
+                        <td style="color: var(--success); font-weight: 700;">2.46%</td>
+                        <td>₹12.57</td>
+                        <td><span class="badge badge-success">Scale</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="margin-top: 16px;">
+                <div class="alert alert-warning">
+                    <span class="alert-icon">💡</span>
+                    <div><strong>Video outperforms image 3.3x on CTR</strong> and costs 40% less per click. Image ad should be paused immediately. Video-first strategy is the way forward.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== CRITICAL ISSUES ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-accent);">🚨</div>
+        <div>
+            <h2>Critical Issues Found</h2>
+            <div class="section-sub">Must-fix before scaling to ₹6K/day</div>
+        </div>
+    </div>
+
+    <div class="grid-3">
+        <div class="alert alert-danger" style="flex-direction: column; border-radius: 14px;">
+            <div style="font-weight: 800; font-size: 1.1rem; color: var(--accent); margin-bottom: 8px;">❌ No Lead Tracking</div>
+            <div>Conversion data returns NULL across all dates. Leads from instant forms are not being tracked by the pixel/API. <strong>Without this, CPL optimization is impossible.</strong></div>
+            <div style="margin-top: 10px;"><span class="badge badge-danger">Priority: P0</span></div>
+        </div>
+        <div class="alert alert-danger" style="flex-direction: column; border-radius: 14px;">
+            <div style="font-weight: 800; font-size: 1.1rem; color: var(--accent); margin-bottom: 8px;">❌ Single Ad Set = No Testing</div>
+            <div>One ad set "Adset 1000" targets one audience. No interest-based, location-based, or lookalike audience testing. <strong>Algorithm has nothing to optimize against.</strong></div>
+            <div style="margin-top: 10px;"><span class="badge badge-danger">Priority: P0</span></div>
+        </div>
+        <div class="alert alert-warning" style="flex-direction: column; border-radius: 14px;">
+            <div style="font-weight: 800; font-size: 1.1rem; color: var(--gold); margin-bottom: 8px;">⚠️ Budget Underutilized</div>
+            <div>Avg. daily spend is ₹1,365 — only 22.7% of the ₹6,000 target. Campaign is not set up to absorb the full budget. Needs restructuring with multiple ad sets.</div>
+            <div style="margin-top: 10px;"><span class="badge badge-warning">Priority: P1</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== COMPETITOR ANALYSIS ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">🔍</div>
+        <div>
+            <h2>Competitor Landscape — Sriperumbudur</h2>
+            <div class="section-sub">Key competitors in the Sriperumbudur plot market</div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+        <div class="card-title">🏢 Premier Housing — JJS Ashok Nagar (Primary Competitor)</div>
+        <div class="grid-2" style="gap: 24px;">
+            <div>
+                <div class="compare-row">
+                    <div class="compare-label">Location</div>
+                    <div class="compare-us">THE SAGA — Thodukadu, Sriperumbudur</div>
+                    <div class="compare-them">JJS Ashok Nagar — Nr. Toll Plaza</div>
+                </div>
+                <div class="compare-row">
+                    <div class="compare-label">Price/sq.ft</div>
+                    <div class="compare-us">₹2,999 (Offer) ✅</div>
+                    <div class="compare-them">₹2,646</div>
+                </div>
+                <div class="compare-row">
+                    <div class="compare-label">Plot Sizes</div>
+                    <div class="compare-us">588 – 3,000 sq.ft</div>
+                    <div class="compare-them">800+ sq.ft</div>
+                </div>
+                <div class="compare-row">
+                    <div class="compare-label">Total Plots</div>
+                    <div class="compare-us">80 Exclusive Plots</div>
+                    <div class="compare-them">100+ Plots</div>
+                </div>
+                <div class="compare-row">
+                    <div class="compare-label">Amenities</div>
+                    <div class="compare-us">Well-planned roads, gated</div>
+                    <div class="compare-them">Pool, Gym, Clubhouse, Gated</div>
+                </div>
+            </div>
+            <div>
+                <div class="highlight-box">
+                    <h3>🎯 Competitive Ad Angles to Exploit</h3>
+                    <ul style="list-style: none; padding: 0; font-size: 0.88rem; line-height: 2;">
+                        <li>✅ <strong>Smaller entry plots (588 sq.ft)</strong> — Lower entry ticket size vs competitors (800+)</li>
+                        <li>✅ <strong>₹2,999 launch offer</strong> — Strong limited-time urgency hook</li>
+                        <li>✅ <strong>"Only 80 plots"</strong> — Scarcity/exclusivity angle</li>
+                        <li>✅ <strong>Industrial corridor growth</strong> — Hyundai, SIPCOT, Oragadam proximity</li>
+                        <li>✅ <strong>Investment positioning</strong> — Market price ₹3,600 vs offer ₹2,999 = instant 17% value</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📊 Market Rate Comparison — Sriperumbudur Area</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Price/sq.ft</th>
+                    <th>Plot Size</th>
+                    <th>Developer</th>
+                    <th>SAGA Advantage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>THE SAGA</strong></td>
+                    <td style="color: var(--success); font-weight: 700;">₹2,999</td>
+                    <td>588 – 3,000</td>
+                    <td>Propshell</td>
+                    <td><span class="badge badge-success">Our Project</span></td>
+                </tr>
+                <tr>
+                    <td>JJS Ashok Nagar</td>
+                    <td>₹2,646</td>
+                    <td>800+</td>
+                    <td>Premier Housing</td>
+                    <td>Lower entry but smaller range</td>
+                </tr>
+                <tr>
+                    <td>Heritage Plots</td>
+                    <td>₹2,500+</td>
+                    <td>587 – 2,689</td>
+                    <td>Independent</td>
+                    <td>SAGA has better road connectivity</td>
+                </tr>
+                <tr>
+                    <td>Dell City Plots</td>
+                    <td>₹1,885</td>
+                    <td>Varies</td>
+                    <td>Independent</td>
+                    <td>Lower quality, no gated layout</td>
+                </tr>
+                <tr>
+                    <td>VGN Brixton</td>
+                    <td>₹3,000+</td>
+                    <td>Varies</td>
+                    <td>VGN</td>
+                    <td>SAGA is same price with launch offer</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ========== NEW CAMPAIGN ARCHITECTURE ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-gold);">🏗️</div>
+        <div>
+            <h2>Proposed Campaign Architecture</h2>
+            <div class="section-sub">Restructured for ₹6,000/day budget with CPL ₹300-350 target</div>
+        </div>
+    </div>
+
+    <div class="highlight-box" style="margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h3>💰 Budget Allocation Strategy</h3>
+                <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 8px;">₹6,000/day = ₹1,80,000/month | 3-Campaign CBO Structure</p>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-size: 0.75rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px;">Expected Leads/Month</div>
+                <div style="font-size: 2rem; font-weight: 900; color: var(--gold);">514 – 600</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 20px;">
+        <div class="card" style="border-top: 4px solid var(--accent);">
+            <div class="card-title">🔴 Campaign 1: Core Lead Gen</div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--accent);">₹3,000/day</div>
+            <div style="font-size: 0.82rem; color: #888; margin-bottom: 16px;">50% of budget — Primary performance driver</div>
+            <div style="font-size: 0.85rem; line-height: 1.8;">
+                <strong>Objective:</strong> Leads (Instant Form)<br>
+                <strong>Optimization:</strong> Maximize conversions<br>
+                <strong>Ad Sets:</strong> 3 audiences<br>
+                <strong>Ads/Set:</strong> 3-4 creatives each<br>
+                <strong>Bid:</strong> Cost cap ₹350
+            </div>
+            <div style="margin-top: 12px;">
+                <span class="tag">Interest-based</span>
+                <span class="tag">Location-based</span>
+                <span class="tag">Broad targeting</span>
+            </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--gold);">
+            <div class="card-title">🟡 Campaign 2: Testing Lab</div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--gold);">₹2,000/day</div>
+            <div style="font-size: 0.82rem; color: #888; margin-bottom: 16px;">33% of budget — Creative & audience testing</div>
+            <div style="font-size: 0.85rem; line-height: 1.8;">
+                <strong>Objective:</strong> Leads (Instant Form)<br>
+                <strong>Optimization:</strong> Maximize conversions<br>
+                <strong>Ad Sets:</strong> 4 test audiences<br>
+                <strong>Ads/Set:</strong> 2-3 creatives each<br>
+                <strong>Bid:</strong> Lowest cost
+            </div>
+            <div style="margin-top: 12px;">
+                <span class="tag">Lookalikes</span>
+                <span class="tag">New creatives</span>
+                <span class="tag">Hook testing</span>
+            </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--success);">
+            <div class="card-title">🟢 Campaign 3: Retargeting</div>
+            <div style="font-size: 2rem; font-weight: 900; color: var(--success);">₹1,000/day</div>
+            <div style="font-size: 0.82rem; color: #888; margin-bottom: 16px;">17% of budget — Warm audience conversion</div>
+            <div style="font-size: 0.85rem; line-height: 1.8;">
+                <strong>Objective:</strong> Leads (Instant Form)<br>
+                <strong>Optimization:</strong> Maximize conversions<br>
+                <strong>Ad Sets:</strong> 2 retarget pools<br>
+                <strong>Ads/Set:</strong> 2-3 creatives each<br>
+                <strong>Bid:</strong> Lowest cost
+            </div>
+            <div style="margin-top: 12px;">
+                <span class="tag">Video viewers</span>
+                <span class="tag">Page engagers</span>
+                <span class="tag">Form openers</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Structure -->
+    <div class="card">
+        <div class="card-title">📐 Full Campaign Structure (Detailed)</div>
+        <div class="campaign-tree" style="line-height: 2.2;">
+            <div class="tree-campaign"><span class="tree-icon">📂</span> <strong>SAGA_LG_Core_Apr26</strong> — CBO ₹3,000/day | Cost Cap ₹350</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS1: Interest — Real Estate + Investment + Plot Buyers | Chennai 25-55 M+F</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Site walkthrough + price reveal (15s)</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Testimonial/Employee walkthrough (20s)</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Carousel: Plot layout + price + landmarks</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS2: Location — Sriperumbudur + Oragadam + Poonamallee | 25-55 All</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: "₹2,999/sqft — limited 80 plots" hook</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Industrial corridor growth story</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Single image: Map + price + CTA</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS3: Broad — Chennai Metro 25-55 | Advantage+ Audience</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Best performing from AS1/AS2</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Carousel: Investment returns angle</div>
+            <br>
+            <div class="tree-campaign"><span class="tree-icon">📂</span> <strong>SAGA_LG_Test_Apr26</strong> — CBO ₹2,000/day | Lowest Cost</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS4: Lookalike 1% — Based on existing leads/engagers</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: New hook test A</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: New hook test B</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS5: Interest — Manufacturing employees + IT professionals</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: "Work near Hyundai/SIPCOT? Live nearby" angle</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Image: Employee-targeted with commute map</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS6: Age Split — 40-55 investment focus</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: "Secure land for your family" emotional hook</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Carousel: ROI + appreciation angle</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS7: NRI / Tier-1 city interest targeting</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: "Invest in Chennai's growth corridor" hook</div>
+            <br>
+            <div class="tree-campaign"><span class="tree-icon">📂</span> <strong>SAGA_LG_Retarget_Apr26</strong> — CBO ₹1,000/day | Lowest Cost</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS8: Video Viewers 50%+ (7 days) + Page Engagers</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Urgency — "Only X plots left" social proof</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Image: Price comparison + limited offer deadline</div>
+            <div class="tree-adset"><span class="tree-icon">📁</span> AS9: Form Openers (didn't submit) + IG/FB Engagers 30d</div>
+            <div class="tree-ad"><span class="tree-icon">🎬</span> Video: Walkthrough + "Book your site visit" CTA</div>
+            <div class="tree-ad"><span class="tree-icon">🖼️</span> Image: Testimonial + site visit invite</div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== IDEAL CUSTOMER PROFILE ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">🧠</div>
+        <div>
+            <h2>Ideal Customer Profile (ICP)</h2>
+            <div class="section-sub">Deep buyer persona analysis for THE SAGA — Sriperumbudur</div>
+        </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 20px;">
+        <div class="card" style="border-top: 4px solid var(--accent);">
+            <div class="card-title">👤 Persona 1: First-Time Plot Buyer</div>
+            <div style="font-size: 0.85rem; line-height: 1.9;">
+                <div style="background: #ffeaea; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px;">
+                    <strong style="color: var(--accent);">🎯 PRIMARY PERSONA — 50% of budget</strong>
+                </div>
+                <strong>Age:</strong> 28 – 40 years<br>
+                <strong>Gender:</strong> Male (70%) / Female (30%)<br>
+                <strong>Income:</strong> ₹4L – ₹10L per annum<br>
+                <strong>Occupation:</strong> Factory workers, supervisors & mid-level employees at Hyundai, Saint-Gobain, Renault-Nissan, SIPCOT companies, Foxconn, Flextronics<br>
+                <strong>Education:</strong> ITI / Diploma / Degree holders<br>
+                <strong>Location:</strong> Currently living in rented houses in Sriperumbudur, Oragadam, Poonamallee, Avadi, Ambattur, Thirumazhisai<br>
+                <strong>Marital Status:</strong> Married with 1-2 children<br>
+                <strong>Language:</strong> Tamil (primary), some English<br>
+                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                    <strong>🧠 Mindset:</strong><br>
+                    "I'm tired of paying rent. I want to own land and build my own house near my workplace."<br><br>
+                    <strong>💡 Buying Triggers:</strong><br>
+                    → Children's school admission nearby<br>
+                    → Rent increase / lease renewal pressure<br>
+                    → Festival season (Pongal, Diwali, Akshaya Tritiya)<br>
+                    → EMI affordability realization<br>
+                    → Peer who recently bought a plot
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--gold);">
+            <div class="card-title">💼 Persona 2: Smart Investor</div>
+            <div style="font-size: 0.85rem; line-height: 1.9;">
+                <div style="background: #fff8e1; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px;">
+                    <strong style="color: var(--gold);">🎯 HIGH-VALUE PERSONA — 30% of budget</strong>
+                </div>
+                <strong>Age:</strong> 35 – 55 years<br>
+                <strong>Gender:</strong> Male (80%) / Female (20%)<br>
+                <strong>Income:</strong> ₹8L – ₹25L+ per annum<br>
+                <strong>Occupation:</strong> IT professionals (OMR/Sholinganallur corridor), Government employees, Bank officers, Small business owners, Senior factory managers<br>
+                <strong>Education:</strong> Graduate / Post-graduate<br>
+                <strong>Location:</strong> Chennai city (T. Nagar, Velachery, Tambaram, Porur, Guindy), Bangalore, Hyderabad, NRI locations<br>
+                <strong>Marital Status:</strong> Married, may already own 1 property<br>
+                <strong>Language:</strong> Tamil & English bilingual<br>
+                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                    <strong>🧠 Mindset:</strong><br>
+                    "Land prices in Sriperumbudur will double in 5 years due to industrial growth. I want to invest before prices go up."<br><br>
+                    <strong>💡 Buying Triggers:</strong><br>
+                    → Lump sum available (bonus, savings, retirement)<br>
+                    → Seeing neighborhood/corridor growth news<br>
+                    → Tax-saving end of financial year<br>
+                    → Gold/stock market volatility → shift to real estate<br>
+                    → "Market price ₹3,600 vs offer ₹2,999" value perception
+                </div>
+            </div>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--success);">
+            <div class="card-title">👨‍👩‍👧 Persona 3: Family Land Seeker</div>
+            <div style="font-size: 0.85rem; line-height: 1.9;">
+                <div style="background: #e8f8f5; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px;">
+                    <strong style="color: var(--success);">🎯 EMOTIONAL BUYER — 20% of budget</strong>
+                </div>
+                <strong>Age:</strong> 40 – 58 years<br>
+                <strong>Gender:</strong> Male (60%) / Female (40%)<br>
+                <strong>Income:</strong> ₹6L – ₹15L per annum<br>
+                <strong>Occupation:</strong> Senior employees nearing retirement, teachers, government servants, women homemakers with savings<br>
+                <strong>Education:</strong> Mixed<br>
+                <strong>Location:</strong> Sriperumbudur surroundings, Chennai suburban belt, native towns (Kanchipuram, Vellore, Tiruvannamalai)<br>
+                <strong>Marital Status:</strong> Married, children in college/working<br>
+                <strong>Language:</strong> Tamil (primary)<br>
+                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #eee;">
+                    <strong>🧠 Mindset:</strong><br>
+                    "I want to buy land for my son/daughter's future. A plot is the best asset I can give my family."<br><br>
+                    <strong>💡 Buying Triggers:</strong><br>
+                    → Child's marriage planning (land as asset)<br>
+                    → Retirement fund deployment<br>
+                    → Emotional "legacy" desire<br>
+                    → Affordable entry price (588 sqft = ~₹17.6L)<br>
+                    → Peer family who recently bought land
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Psychographic & Behavioral Profiles -->
+    <div class="card" style="margin-bottom: 20px;">
+        <div class="card-title">🧠 Psychographic & Behavioral Profile — All Personas</div>
+        <div class="grid-2" style="gap: 24px;">
+            <div>
+                <div style="font-size: 0.85rem; line-height: 2;">
+                    <strong style="color: var(--primary); font-size: 0.95rem;">Pain Points (What keeps them up at night)</strong><br>
+                    😰 Rising rent and no asset to show for years of work<br>
+                    😰 Fear of land prices going even higher — "if I don't buy now..."<br>
+                    😰 Confusion about legal approvals / RERA / panchayat status<br>
+                    😰 Worried about builder fraud / fake documents<br>
+                    😰 Peer pressure — "Everyone around me owns property"<br>
+                    😰 Don't want children to struggle for housing
+                </div>
+                <div style="margin-top: 16px; font-size: 0.85rem; line-height: 2;">
+                    <strong style="color: var(--primary); font-size: 0.95rem;">Decision-Making Behavior</strong><br>
+                    📱 Starts research on Facebook/Instagram (sees ad)<br>
+                    🔍 Googles "plots in Sriperumbudur" for validation<br>
+                    👨‍👩‍👧 Discusses with spouse/family over 1-2 weeks<br>
+                    📞 Calls/WhatsApp to ask price, plot availability<br>
+                    🚗 Visits site on weekend with family<br>
+                    📝 Books with advance within 1-3 site visits<br>
+                    ⏱️ <strong>Average decision cycle: 2-6 weeks from first ad exposure</strong>
+                </div>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem; line-height: 2;">
+                    <strong style="color: var(--primary); font-size: 0.95rem;">Objections to Address in Ads</strong><br>
+                    ❓ "Is it RERA approved / legal?" → Show approvals<br>
+                    ❓ "Is this too far from city?" → Show connectivity map<br>
+                    ❓ "Can I build immediately?" → "Construction-ready plots"<br>
+                    ❓ "What if I can't pay full?" → EMI / bank loan options<br>
+                    ❓ "Is the price genuine?" → Market vs offer comparison<br>
+                    ❓ "Which bank loans available?" → "All leading bank approved"
+                </div>
+                <div style="margin-top: 16px; font-size: 0.85rem; line-height: 2;">
+                    <strong style="color: var(--primary); font-size: 0.95rem;">Content They Engage With</strong><br>
+                    📺 Tamil YouTube channels (real estate, finance)<br>
+                    📱 Facebook Groups: "Chennai Real Estate", "Plots in Chennai"<br>
+                    📰 Tamil news sites & financial planning content<br>
+                    🎵 Instagram Reels (property walkthrough videos)<br>
+                    💬 WhatsApp group forwards about land deals<br>
+                    📲 Online banking / UPI apps (tech-comfortable)<br>
+                    🏏 Cricket, movies, devotional content on social
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== DETAILED AUDIENCE TARGETING ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #0984e3, #74b9ff);">🎯</div>
+        <div>
+            <h2>Detailed Audience Targeting — Meta Ads Manager Setup</h2>
+            <div class="section-sub">Exact targeting parameters for each ad set — copy-paste ready</div>
+        </div>
+    </div>
+
+    <!-- AS1 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid var(--accent);">
+        <div class="card-title">🔴 AS1: Interest-Based — Real Estate Buyers (Campaign 1: Core)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td>Chennai (50km radius) + Kanchipuram District + Tiruvallur District</td></tr>
+                        <tr><td><strong>Age</strong></td><td>25 – 55</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Language</strong></td><td>Tamil, English (India)</td></tr>
+                        <tr><td><strong>Placements</strong></td><td>Advantage+ (Auto) — let Meta optimize</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>2,500,000 – 4,000,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <strong style="color: var(--accent);">📌 Detailed Interests (Stack ALL):</strong>
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="tag">Real estate</span>
+                        <span class="tag">Property</span>
+                        <span class="tag">Real estate investing</span>
+                        <span class="tag">Residential area</span>
+                        <span class="tag">Land lot</span>
+                        <span class="tag">Plot (land)</span>
+                        <span class="tag">Villa</span>
+                        <span class="tag">Property investment</span>
+                        <span class="tag">Home construction</span>
+                        <span class="tag">House hunting</span>
+                        <span class="tag">First-time buyer</span>
+                        <span class="tag">Real estate broker</span>
+                        <span class="tag">99acres.com</span>
+                        <span class="tag">MagicBricks.com</span>
+                        <span class="tag">Housing.com</span>
+                        <span class="tag">NoBroker</span>
+                        <span class="tag">CommonFloor</span>
+                        <span class="tag">Square Yards</span>
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <strong style="color: #888;">🚫 Exclude Interests:</strong>
+                        <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px;">
+                            <span class="tag" style="background: #ffeaea;">Real estate agents (job title)</span>
+                            <span class="tag" style="background: #ffeaea;">Property dealers</span>
+                            <span class="tag" style="background: #ffeaea;">Real estate developer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS2 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid #0984e3;">
+        <div class="card-title">🔵 AS2: Location Hyper-Target — Sriperumbudur Corridor Workers (Campaign 1: Core)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td>Pin drops (25km radius each):<br>📍 Sriperumbudur<br>📍 Oragadam<br>📍 Poonamallee<br>📍 Avadi<br>📍 Ambattur<br>📍 Thirumazhisai</td></tr>
+                        <tr><td><strong>Age</strong></td><td>25 – 50</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Language</strong></td><td>Tamil, English (India)</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>800,000 – 1,500,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <strong style="color: #0984e3;">📌 Detailed Interests:</strong>
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="tag">Property</span>
+                        <span class="tag">Real estate</span>
+                        <span class="tag">Land lot</span>
+                        <span class="tag">Residential area</span>
+                        <span class="tag">Home loan</span>
+                        <span class="tag">SBI Home Loans</span>
+                        <span class="tag">HDFC Home Loans</span>
+                        <span class="tag">Home construction</span>
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <strong style="color: #0984e3;">📌 Behaviors:</strong>
+                        <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px;">
+                            <span class="tag">Small business owners</span>
+                            <span class="tag">Engaged shoppers</span>
+                            <span class="tag">Recently moved</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <strong style="color: #0984e3;">📌 Demographics:</strong>
+                        <div style="margin-top: 4px; display: flex; flex-wrap: wrap; gap: 4px;">
+                            <span class="tag">Homeowners (Renters)</span>
+                            <span class="tag">Income: Top 25-50% of ZIP</span>
+                            <span class="tag">Parents with children 0-12</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 12px; padding: 10px; background: #e8f4fd; border-radius: 8px;">
+                        <strong>💡 Why this works:</strong> These people LIVE and WORK near the project. They see Sriperumbudur's growth daily. Lowest CPL expected — they already know the area.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS3 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid var(--success);">
+        <div class="card-title">🟢 AS3: Advantage+ Broad — Let Meta's AI Find Buyers (Campaign 1: Core)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td>Chennai Metropolitan Area (entire)</td></tr>
+                        <tr><td><strong>Age</strong></td><td>25 – 55</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Interests</strong></td><td>NONE — Advantage+ Audience enabled</td></tr>
+                        <tr><td><strong>Audience Signal</strong></td><td>Suggest: Real estate, Property, Land as signals (not restrictions)</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>5,000,000+</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <div style="padding: 14px; background: #e8f8f5; border-radius: 8px; margin-bottom: 12px;">
+                        <strong style="color: var(--success);">🤖 Why Advantage+ Broad?</strong><br>
+                        Meta's algorithm in 2026 is extremely powerful at finding converters without manual interest stacking. By giving it a broad audience with strong creative signals, it finds buyers we'd never think to target manually. Often delivers the <strong>lowest CPL</strong> in real estate campaigns.
+                    </div>
+                    <strong>How it works:</strong><br>
+                    → Meta uses your pixel data + form submission patterns<br>
+                    → Algorithm finds "lookalike behaviors" automatically<br>
+                    → Reaches people who BEHAVE like buyers but don't match interest categories<br>
+                    → Requires strong creative (video with clear property + price)<br><br>
+                    <strong style="color: var(--danger);">⚠️ Prerequisite:</strong> Fix lead tracking first. Without conversion data, Advantage+ has nothing to optimize toward.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS4 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid var(--gold);">
+        <div class="card-title">🟡 AS4: Lookalike 1% — Clone Your Best Leads (Campaign 2: Testing)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Source Audience</strong></td><td>Custom Audience: All lead form submitters (last 60 days)</td></tr>
+                        <tr><td><strong>LAL %</strong></td><td>1% (highest similarity)</td></tr>
+                        <tr><td><strong>Location</strong></td><td>Tamil Nadu (entire state)</td></tr>
+                        <tr><td><strong>Age</strong></td><td>25 – 55</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Additional Interests</strong></td><td>NONE — let LAL do the work</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>700,000 – 1,200,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <div style="padding: 14px; background: #fff8e1; border-radius: 8px; margin-bottom: 12px;">
+                        <strong style="color: var(--gold);">📌 Lookalike Setup Guide:</strong><br>
+                        1. Go to Meta Audiences → Create Custom Audience<br>
+                        2. Source: Instant Form → All who submitted<br>
+                        3. Retention: Last 60 days<br>
+                        4. Create Lookalike → 1% → Tamil Nadu<br>
+                        5. Need minimum 100 source leads (you'll hit this in Week 1-2)
+                    </div>
+                    <strong>Future LAL Expansion (Week 3+):</strong><br>
+                    → LAL from <strong>qualified leads only</strong> (CRM-tagged)<br>
+                    → LAL from <strong>site visitors</strong> (after website goes live)<br>
+                    → LAL from <strong>WhatsApp enquirers</strong><br>
+                    → Test 1% vs 2% vs 3% LAL sizes
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS5 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid #e17055;">
+        <div class="card-title">🟠 AS5: Industrial Corridor Employees (Campaign 2: Testing)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td>📍 Sriperumbudur SIPCOT (15km radius)<br>📍 Oragadam Industrial Area (15km radius)<br>📍 Irungattukottai (10km radius)</td></tr>
+                        <tr><td><strong>Age</strong></td><td>28 – 48</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>400,000 – 800,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <strong style="color: #e17055;">📌 Interest + Employer Targeting:</strong>
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="tag">Hyundai Motor India</span>
+                        <span class="tag">Renault-Nissan</span>
+                        <span class="tag">Saint-Gobain</span>
+                        <span class="tag">Foxconn</span>
+                        <span class="tag">Flextronics</span>
+                        <span class="tag">Dell Technologies</span>
+                        <span class="tag">Samsung India</span>
+                        <span class="tag">Manufacturing</span>
+                        <span class="tag">Automobile industry</span>
+                        <span class="tag">Factory worker</span>
+                        <span class="tag">Industrial engineering</span>
+                    </div>
+                    <div style="margin-top: 12px; padding: 10px; background: #fff0e6; border-radius: 8px;">
+                        <strong>💡 Ad Angle:</strong> "Working in Sriperumbudur? Stop paying rent. Own a plot 10 minutes from your factory — ₹2,999/sqft. EMI starts ₹8,500/month."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS6 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid #6c5ce7;">
+        <div class="card-title">🟣 AS6: High-Value Investors — Age 40-55 (Campaign 2: Testing)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td>Chennai Metro + Coimbatore + Bangalore + Hyderabad</td></tr>
+                        <tr><td><strong>Age</strong></td><td>40 – 55 (narrow)</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Income Target</strong></td><td>Top 10-25% of ZIP codes</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>600,000 – 1,000,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <strong style="color: #6c5ce7;">📌 Interests (Investment-Focused):</strong>
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="tag">Investment</span>
+                        <span class="tag">Real estate investing</span>
+                        <span class="tag">Mutual funds</span>
+                        <span class="tag">Stock market</span>
+                        <span class="tag">Property investment</span>
+                        <span class="tag">Gold investment</span>
+                        <span class="tag">Retirement planning</span>
+                        <span class="tag">Tax saving</span>
+                        <span class="tag">Wealth management</span>
+                        <span class="tag">Fixed deposit</span>
+                        <span class="tag">MoneyControl</span>
+                        <span class="tag">Economic Times</span>
+                        <span class="tag">Zerodha</span>
+                        <span class="tag">Groww</span>
+                    </div>
+                    <div style="margin-top: 12px; padding: 10px; background: #f0ecff; border-radius: 8px;">
+                        <strong>💡 Ad Angle:</strong> "Market Price ₹3,600/sqft → Your Price ₹2,999/sqft. That's 17% instant value. Land in Sriperumbudur industrial corridor appreciated 100%+ in 5 years. 80 plots only."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS7 -->
+    <div class="card" style="margin-bottom: 16px; border-left: 4px solid #00b894;">
+        <div class="card-title">🌍 AS7: NRI & Tier-1 City Investors (Campaign 2: Testing)</div>
+        <div class="grid-2" style="gap: 20px;">
+            <div>
+                <table class="data-table">
+                    <thead><tr><th colspan="2">Targeting Parameters</th></tr></thead>
+                    <tbody>
+                        <tr><td style="width: 140px;"><strong>Location</strong></td><td><strong>Option A (NRI):</strong> UAE, Singapore, Malaysia, Qatar, Kuwait, Oman, Saudi Arabia, USA, UK, Canada<br><strong>Option B (Tier-1):</strong> Bangalore, Hyderabad, Mumbai, Delhi-NCR, Pune</td></tr>
+                        <tr><td><strong>Age</strong></td><td>30 – 55</td></tr>
+                        <tr><td><strong>Gender</strong></td><td>All</td></tr>
+                        <tr><td><strong>Language</strong></td><td>Tamil (MANDATORY — filters for Tamil diaspora)</td></tr>
+                        <tr><td><strong>Est. Audience Size</strong></td><td>200,000 – 500,000</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div style="font-size: 0.85rem;">
+                    <strong style="color: #00b894;">📌 Interests:</strong>
+                    <div style="margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px;">
+                        <span class="tag">India property</span>
+                        <span class="tag">Chennai real estate</span>
+                        <span class="tag">NRI investment</span>
+                        <span class="tag">Tamil Nadu</span>
+                        <span class="tag">Expat life</span>
+                        <span class="tag">Property in India</span>
+                        <span class="tag">Remittance</span>
+                        <span class="tag">Tamil movies</span>
+                        <span class="tag">Tamil news</span>
+                    </div>
+                    <div style="margin-top: 12px; padding: 10px; background: #e8f8f5; border-radius: 8px;">
+                        <strong>💡 Ad Angle:</strong> "Invest in Chennai's fastest-growing corridor. Premium villa plots from ₹17.6L* at Sriperumbudur — near Hyundai, SIPCOT. 100% legal, construction-ready. Video call site visit available."
+                    </div>
+                    <div style="margin-top: 8px; padding: 10px; background: #fff8e1; border-radius: 8px;">
+                        <strong>⚠️ Note:</strong> NRI audience has higher CPL (₹400-600) but much higher ticket size and conversion value. Worth testing with separate ROAS tracking.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AS8 & AS9 — Retargeting -->
+    <div class="grid-2" style="margin-bottom: 16px;">
+        <div class="card" style="border-left: 4px solid var(--accent);">
+            <div class="card-title">🔥 AS8: Hot Retargeting — High Intent (Campaign 3: Retarget)</div>
+            <table class="data-table">
+                <thead><tr><th>Audience Source</th><th>Window</th></tr></thead>
+                <tbody>
+                    <tr><td>Video viewers (50%+ watched)</td><td>Last 7 days</td></tr>
+                    <tr><td>Facebook/Instagram page engagers</td><td>Last 7 days</td></tr>
+                    <tr><td>Lead form openers (didn't submit)</td><td>Last 14 days</td></tr>
+                    <tr><td>Ad clickers (all ads)</td><td>Last 7 days</td></tr>
+                </tbody>
+            </table>
+            <div style="margin-top: 12px; font-size: 0.85rem;">
+                <strong>Targeting:</strong> Age 25-55, All genders, No interest stacking<br>
+                <strong>Est. Size:</strong> 5,000 – 25,000 (grows weekly)<br>
+                <strong>Expected CPL:</strong> ₹150 – ₹250 (lowest CPL pool)
+            </div>
+            <div style="margin-top: 10px; padding: 10px; background: #ffeaea; border-radius: 8px; font-size: 0.82rem;">
+                <strong>💡 Creative Angle:</strong> "You were looking at THE SAGA plots — Only 80 available. Book your FREE site visit this weekend before they're gone."
+            </div>
+        </div>
+
+        <div class="card" style="border-left: 4px solid var(--gold);">
+            <div class="card-title">♻️ AS9: Warm Retargeting — Nurture Pool (Campaign 3: Retarget)</div>
+            <table class="data-table">
+                <thead><tr><th>Audience Source</th><th>Window</th></tr></thead>
+                <tbody>
+                    <tr><td>Video viewers (25%+ watched)</td><td>Last 30 days</td></tr>
+                    <tr><td>All Facebook/Instagram engagers</td><td>Last 30 days</td></tr>
+                    <tr><td>Website visitors (future)</td><td>Last 30 days</td></tr>
+                    <tr><td>Messenger/WhatsApp initiators</td><td>Last 30 days</td></tr>
+                </tbody>
+            </table>
+            <div style="margin-top: 12px; font-size: 0.85rem;">
+                <strong>Targeting:</strong> Age 25-55, All genders, No interest stacking<br>
+                <strong>Est. Size:</strong> 15,000 – 60,000 (grows monthly)<br>
+                <strong>Expected CPL:</strong> ₹200 – ₹300
+            </div>
+            <div style="margin-top: 10px; padding: 10px; background: #fff8e1; border-radius: 8px; font-size: 0.82rem;">
+                <strong>💡 Creative Angle:</strong> Social proof — testimonials, site visit photos, "X plots already booked" urgency, detailed walkthrough video.
+            </div>
+        </div>
+    </div>
+
+    <!-- Exclusion Strategy -->
+    <div class="card" style="margin-bottom: 16px; border-top: 4px solid var(--danger);">
+        <div class="card-title">🚫 Exclusion Strategy — Critical for Budget Efficiency</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Campaign</th>
+                    <th>Must Exclude</th>
+                    <th>Why</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>All Campaigns</strong></td>
+                    <td>Lead form submitters (last 30 days)</td>
+                    <td>Don't pay to reach people who already submitted</td>
+                </tr>
+                <tr>
+                    <td><strong>Core + Test</strong></td>
+                    <td>Existing customers / booked buyers</td>
+                    <td>Upload phone list monthly from CRM</td>
+                </tr>
+                <tr>
+                    <td><strong>Test Campaign</strong></td>
+                    <td>Core campaign audiences (AS1, AS2, AS3)</td>
+                    <td>Prevent audience overlap / self-competition</td>
+                </tr>
+                <tr>
+                    <td><strong>Retargeting</strong></td>
+                    <td>All cold audiences from Core + Test</td>
+                    <td>Retarget pool must only be warm users</td>
+                </tr>
+                <tr>
+                    <td><strong>All Campaigns</strong></td>
+                    <td>Real estate agents / brokers / dealers</td>
+                    <td>Exclude via job title interests to avoid junk leads</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Audience Sizing Summary -->
+    <div class="highlight-box">
+        <h3>📊 Audience Sizing & Budget Distribution Summary</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.85rem;">
+            <thead>
+                <tr style="border-bottom: 2px solid rgba(255,255,255,0.3);">
+                    <th style="text-align: left; padding: 10px; color: var(--gold);">Ad Set</th>
+                    <th style="text-align: left; padding: 10px; color: var(--gold);">Persona Match</th>
+                    <th style="text-align: center; padding: 10px; color: var(--gold);">Est. Size</th>
+                    <th style="text-align: center; padding: 10px; color: var(--gold);">Daily Budget</th>
+                    <th style="text-align: center; padding: 10px; color: var(--gold);">Expected CPL</th>
+                    <th style="text-align: center; padding: 10px; color: var(--gold);">Priority</th>
+                </tr>
+            </thead>
+            <tbody style="color: rgba(255,255,255,0.9);">
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS1: Interest-Based</td>
+                    <td style="padding: 10px;">All 3 Personas</td>
+                    <td style="text-align: center; padding: 10px;">2.5M – 4M</td>
+                    <td style="text-align: center; padding: 10px;">₹1,000</td>
+                    <td style="text-align: center; padding: 10px;">₹300 – ₹350</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS2: Location Hyper-Target</td>
+                    <td style="padding: 10px;">Persona 1 (Workers)</td>
+                    <td style="text-align: center; padding: 10px;">800K – 1.5M</td>
+                    <td style="text-align: center; padding: 10px;">₹1,000</td>
+                    <td style="text-align: center; padding: 10px;">₹250 – ₹320</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS3: Advantage+ Broad</td>
+                    <td style="padding: 10px;">Algorithm-driven</td>
+                    <td style="text-align: center; padding: 10px;">5M+</td>
+                    <td style="text-align: center; padding: 10px;">₹1,000</td>
+                    <td style="text-align: center; padding: 10px;">₹280 – ₹340</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS4: Lookalike 1%</td>
+                    <td style="padding: 10px;">Clone of best leads</td>
+                    <td style="text-align: center; padding: 10px;">700K – 1.2M</td>
+                    <td style="text-align: center; padding: 10px;">₹500</td>
+                    <td style="text-align: center; padding: 10px;">₹300 – ₹380</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS5: Industrial Workers</td>
+                    <td style="padding: 10px;">Persona 1 (Workers)</td>
+                    <td style="text-align: center; padding: 10px;">400K – 800K</td>
+                    <td style="text-align: center; padding: 10px;">₹500</td>
+                    <td style="text-align: center; padding: 10px;">₹280 – ₹350</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS6: HV Investors 40-55</td>
+                    <td style="padding: 10px;">Persona 2 (Investors)</td>
+                    <td style="text-align: center; padding: 10px;">600K – 1M</td>
+                    <td style="text-align: center; padding: 10px;">₹500</td>
+                    <td style="text-align: center; padding: 10px;">₹350 – ₹420</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS7: NRI / Tier-1 City</td>
+                    <td style="padding: 10px;">Persona 2 (Investors)</td>
+                    <td style="text-align: center; padding: 10px;">200K – 500K</td>
+                    <td style="text-align: center; padding: 10px;">₹500</td>
+                    <td style="text-align: center; padding: 10px;">₹400 – ₹600</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 10px;">AS8: Hot Retargeting</td>
+                    <td style="padding: 10px;">All (warm audience)</td>
+                    <td style="text-align: center; padding: 10px;">5K – 25K</td>
+                    <td style="text-align: center; padding: 10px;">₹600</td>
+                    <td style="text-align: center; padding: 10px;">₹150 – ₹250</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐⭐⭐</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;">AS9: Warm Retargeting</td>
+                    <td style="padding: 10px;">All (nurture pool)</td>
+                    <td style="text-align: center; padding: 10px;">15K – 60K</td>
+                    <td style="text-align: center; padding: 10px;">₹400</td>
+                    <td style="text-align: center; padding: 10px;">₹200 – ₹300</td>
+                    <td style="text-align: center; padding: 10px;">⭐⭐⭐⭐</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Audience Testing Roadmap -->
+    <div class="card" style="margin-top: 16px;">
+        <div class="card-title">🧪 Audience Testing Roadmap — What to Test When</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Audience Test</th>
+                    <th>Success Criteria</th>
+                    <th>Action if Wins</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Week 1</strong></td>
+                    <td>AS1 vs AS2 vs AS3 — Which core audience delivers cheapest CPL?</td>
+                    <td>CPL < ₹350 with 10+ leads</td>
+                    <td>Winner gets 40% of core budget</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 2</strong></td>
+                    <td>AS5 (Industrial) vs AS6 (Investors) — Which test persona converts better?</td>
+                    <td>CPL < ₹380 with 5+ leads</td>
+                    <td>Winner moves to Core campaign</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 3</strong></td>
+                    <td>AS4 (LAL 1%) — Do lookalikes beat interest targeting?</td>
+                    <td>CPL < AS1 by 15%+</td>
+                    <td>Scale LAL to ₹1,000/day, create 2% LAL</td>
+                </tr>
+                <tr>
+                    <td><strong>Week 3-4</strong></td>
+                    <td>AS7 (NRI) — Is higher CPL justified by lead quality?</td>
+                    <td>Site visit rate > 10% of leads</td>
+                    <td>Keep with separate budget, don't mix in blended CPL</td>
+                </tr>
+                <tr>
+                    <td><strong>Ongoing</strong></td>
+                    <td>AS8 vs AS9 — Hot vs Warm retargeting efficiency</td>
+                    <td>AS8 CPL < AS9 CPL</td>
+                    <td>Shift more budget to AS8 as pool grows</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ========== INSTANT FORM STRATEGY ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-success);">📝</div>
+        <div>
+            <h2>Instant Form Optimization</h2>
+            <div class="section-sub">Higher-intent form design for quality leads at ₹300-350 CPL</div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title">📋 Form A — Standard Intent (Core Campaigns)</div>
+            <div style="background: #f8f9ff; border-radius: 12px; padding: 20px; font-size: 0.88rem;">
+                <div style="font-weight: 700; color: var(--primary); margin-bottom: 12px;">Form Type: More Volume</div>
+                <div style="margin-bottom: 8px;"><strong>Intro:</strong> "Premium Villa Plots in Sriperumbudur from ₹2,999/sq.ft — Only 80 Plots!"</div>
+                <div style="margin-bottom: 8px;"><strong>Cover Image:</strong> Site layout / aerial view of project</div>
+                <div style="line-height: 2;">
+                    <strong>Fields:</strong><br>
+                    1. Full Name (prefilled)<br>
+                    2. Phone Number (prefilled)<br>
+                    3. Email (prefilled)<br>
+                    4. "Are you looking to buy a plot in the next?" → Dropdown: 1 month / 3 months / 6 months / Just exploring<br>
+                </div>
+                <div style="margin-top: 8px;"><strong>Thank You:</strong> "Our team will call you within 2 hours to arrange a free site visit!"</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📋 Form B — Higher Intent (Retargeting)</div>
+            <div style="background: #f0fff8; border-radius: 12px; padding: 20px; font-size: 0.88rem;">
+                <div style="font-weight: 700; color: var(--success); margin-bottom: 12px;">Form Type: Higher Intent</div>
+                <div style="margin-bottom: 8px;"><strong>Intro:</strong> "Book Your FREE Site Visit — THE SAGA, Sriperumbudur"</div>
+                <div style="margin-bottom: 8px;"><strong>Cover Image:</strong> Actual site photos with road/plot demarcation</div>
+                <div style="line-height: 2;">
+                    <strong>Fields:</strong><br>
+                    1. Full Name (prefilled)<br>
+                    2. Phone Number (manual entry — filters junk)<br>
+                    3. "Your budget range?" → Under ₹20L / ₹20-40L / ₹40-60L / ₹60L+<br>
+                    4. "Preferred site visit day?" → Weekday / Weekend / Any day<br>
+                </div>
+                <div style="margin-top: 8px;"><strong>Thank You:</strong> Call-to-action with WhatsApp link + directions to site</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-success" style="margin-top: 16px;">
+        <span class="alert-icon">✅</span>
+        <div><strong>Lead Quality Filter:</strong> The "buying timeline" question in Form A and "budget range" in Form B act as natural quality filters. Leads selecting "Just exploring" or budgets under ₹20L can be deprioritized in follow-up. This keeps CPL in range while improving lead-to-visit conversion.</div>
+    </div>
+</div>
+
+<!-- ========== AD CREATIVE STRATEGY ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #e17055, #fab1a0);">🎨</div>
+        <div>
+            <h2>Ad Creative Strategy</h2>
+            <div class="section-sub">Video-first approach based on current performance data</div>
+        </div>
+    </div>
+
+    <div class="alert alert-info" style="margin-bottom: 20px;">
+        <span class="alert-icon">📊</span>
+        <div><strong>Data-driven decision:</strong> Video ad (2.46% CTR, ₹12.57 CPC) outperforms image ad (0.74% CTR, ₹21.37 CPC) by 3.3x. All new creatives should be video-first with carousel as secondary format.</div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 20px;">
+        <div class="ad-copy-card">
+            <div class="ad-copy-header" style="background: var(--gradient-accent);">🎬 Video Ad 1 — Price Hook (15s Reel)</div>
+            <div class="ad-copy-body">
+                <div class="primary-text">
+                    🏡 Premium Villa Plots at Sriperumbudur — Starting ₹2,999/sq.ft!<br><br>
+                    ✅ 588 to 3,000 sq.ft plots<br>
+                    ✅ Near Hyundai, SIPCOT & Oragadam<br>
+                    ✅ Chennai-Bangalore Highway access<br>
+                    ✅ Only 80 exclusive plots — going fast!<br><br>
+                    📞 Fill the form now for FREE site visit →
+                </div>
+                <div class="headline">Villa Plots @ ₹2,999/sq.ft — Sriperumbudur</div>
+                <div class="description">THE SAGA by Propshell | Limited Launch Offer | Book Your Site Visit</div>
+                <div class="cta-btn">Book Now</div>
+            </div>
+        </div>
+
+        <div class="ad-copy-card">
+            <div class="ad-copy-header" style="background: var(--gradient-gold);">🎬 Video Ad 2 — Investment Angle (20s)</div>
+            <div class="ad-copy-body">
+                <div class="primary-text">
+                    📈 Market Price: ₹3,600/sq.ft<br>
+                    🔥 YOUR Price: Just ₹2,999/sq.ft<br><br>
+                    Why smart investors are choosing Sriperumbudur:<br>
+                    → India's fastest-growing industrial corridor<br>
+                    → Hyundai, Saint-Gobain, SIPCOT nearby<br>
+                    → Land values doubled in 5 years<br><br>
+                    Only 80 plots at THE SAGA. Don't wait. 👇
+                </div>
+                <div class="headline">₹17.6L* Onwards — Invest in Sriperumbudur's Growth</div>
+                <div class="description">THE SAGA | 80 Premium Plots | Limited Launch Price</div>
+                <div class="cta-btn">Learn More</div>
+            </div>
+        </div>
+
+        <div class="ad-copy-card">
+            <div class="ad-copy-header" style="background: var(--gradient-success);">🎬 Video Ad 3 — Proximity Hook (15s)</div>
+            <div class="ad-copy-body">
+                <div class="primary-text">
+                    🏭 Working near Oragadam or Sriperumbudur?<br><br>
+                    Stop paying rent. Own your own plot!<br><br>
+                    THE SAGA — Premium villa plots just minutes from:<br>
+                    🔹 Hyundai Motor India<br>
+                    🔹 SIPCOT Industrial Park<br>
+                    🔹 Oragadam Auto Corridor<br><br>
+                    Starting at just ₹2,999/sq.ft<br>
+                    EMI starts at ₹8,500/month*
+                </div>
+                <div class="headline">Own a Plot Near Your Workplace — ₹2,999/sq.ft</div>
+                <div class="description">THE SAGA Sriperumbudur | Book Free Site Visit Today</div>
+                <div class="cta-btn">Get Details</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title">🎬 Video Creative Specs & Hooks</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Format</td><td>Vertical 9:16 (Reels/Stories) + Square 1:1 (Feed)</td></tr>
+                    <tr><td>Duration</td><td>15-20 seconds (sweet spot for lead gen)</td></tr>
+                    <tr><td>Hook (0-3s)</td><td>Price flash / drone shot / text overlay with offer</td></tr>
+                    <tr><td>Body (3-12s)</td><td>Site walkthrough + plot layout + nearby landmarks</td></tr>
+                    <tr><td>CTA (12-15s)</td><td>"Fill the form below" + price + scarcity ("80 plots only")</td></tr>
+                    <tr><td>Captions</td><td>MANDATORY — 85% watch without sound</td></tr>
+                    <tr><td>Thumbnail</td><td>Custom with price overlay — don't rely on auto</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-title">🧪 Creative Testing Plan (Week-by-Week)</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Test Variable</th>
+                        <th>Variations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Week 1</td><td>Hook Type</td><td>Price hook vs. Drone shot vs. "Only 80 plots"</td></tr>
+                    <tr><td>Week 2</td><td>Ad Format</td><td>Video vs. Carousel vs. Single image</td></tr>
+                    <tr><td>Week 3</td><td>CTA Angle</td><td>"Book Site Visit" vs. "Get Price" vs. "Call Now"</td></tr>
+                    <tr><td>Week 4</td><td>Audience Refine</td><td>Scale winners + kill losers + new LAL</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- ========== BUDGET & PROJECTIONS ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-gold);">💰</div>
+        <div>
+            <h2>Budget Allocation & Projections</h2>
+            <div class="section-sub">Monthly breakdown with CPL ₹300-350 targets</div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom: 20px;">
+        <div class="card-title">📊 Budget Split — April 2026</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Campaign</th>
+                    <th>Daily Budget</th>
+                    <th>Monthly Budget</th>
+                    <th>% Share</th>
+                    <th>Expected CPL</th>
+                    <th>Expected Leads</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>🔴 Core Lead Gen</strong></td>
+                    <td>₹3,000</td>
+                    <td>₹90,000</td>
+                    <td>50%</td>
+                    <td>₹300 – ₹330</td>
+                    <td>273 – 300</td>
+                </tr>
+                <tr>
+                    <td><strong>🟡 Testing Lab</strong></td>
+                    <td>₹2,000</td>
+                    <td>₹60,000</td>
+                    <td>33%</td>
+                    <td>₹330 – ₹380</td>
+                    <td>158 – 182</td>
+                </tr>
+                <tr>
+                    <td><strong>🟢 Retargeting</strong></td>
+                    <td>₹1,000</td>
+                    <td>₹30,000</td>
+                    <td>17%</td>
+                    <td>₹200 – ₹280</td>
+                    <td>107 – 150</td>
+                </tr>
+                <tr style="background: #f8f9ff; font-weight: 700;">
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>₹6,000</strong></td>
+                    <td><strong>₹1,80,000</strong></td>
+                    <td><strong>100%</strong></td>
+                    <td><strong>₹300 – ₹350</strong></td>
+                    <td><strong>514 – 600</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title">📈 Funnel Projections (Monthly)</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Stage</th>
+                        <th>Volume</th>
+                        <th>Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Impressions</td>
+                        <td>~6,25,000</td>
+                        <td>CPM ~₹288</td>
+                    </tr>
+                    <tr>
+                        <td>Reach (Unique)</td>
+                        <td>~3,00,000</td>
+                        <td>Freq: ~2.1</td>
+                    </tr>
+                    <tr>
+                        <td>Link Clicks</td>
+                        <td>~13,900</td>
+                        <td>CTR: ~2.2%</td>
+                    </tr>
+                    <tr>
+                        <td>Form Opens</td>
+                        <td>~4,200</td>
+                        <td>30% of clicks</td>
+                    </tr>
+                    <tr style="background: #e8f8f5;">
+                        <td><strong>Leads (Form Submit)</strong></td>
+                        <td><strong>514 – 600</strong></td>
+                        <td><strong>CPL: ₹300-350</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Qualified Leads</td>
+                        <td>~200 – 250</td>
+                        <td>40% quality rate</td>
+                    </tr>
+                    <tr>
+                        <td>Site Visits</td>
+                        <td>~60 – 80</td>
+                        <td>30% of qualified</td>
+                    </tr>
+                    <tr>
+                        <td>Bookings</td>
+                        <td>~6 – 10</td>
+                        <td>10% of visits</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📊 Week-by-Week Budget Ramp</div>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Week</th>
+                        <th>Daily Spend</th>
+                        <th>Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Week 1</strong><br><span style="color:#888;font-size:0.72rem;">Apr 3 – Apr 9</span></td>
+                        <td>₹3,500</td>
+                        <td>Launch all 3 campaigns. Learning phase. Don't touch bids.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Week 2</strong><br><span style="color:#888;font-size:0.72rem;">Apr 10 – Apr 16</span></td>
+                        <td>₹4,500</td>
+                        <td>Review data. Kill underperformers. Scale winners 30%.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Week 3</strong><br><span style="color:#888;font-size:0.72rem;">Apr 17 – Apr 23</span></td>
+                        <td>₹5,500</td>
+                        <td>New creatives in testing. Expand winning audiences.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Week 4</strong><br><span style="color:#888;font-size:0.72rem;">Apr 24 – Apr 30</span></td>
+                        <td>₹6,000</td>
+                        <td>Full budget. Consolidate into top performers. Launch LALs.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert alert-warning" style="margin-top: 12px;">
+                <span class="alert-icon">⚠️</span>
+                <div><strong>Don't jump to ₹6K/day immediately!</strong> Gradual ramp over 4 weeks lets the algorithm learn and avoids CPL spikes. Budget scaling at 25-30% weekly increments.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== OPTIMIZATION PLAYBOOK ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #6c5ce7, #a29bfe);">⚙️</div>
+        <div>
+            <h2>Optimization Playbook</h2>
+            <div class="section-sub">Daily, weekly, and trigger-based optimization rules</div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card">
+            <div class="card-title">📅 Daily Optimization Checklist</div>
+            <div style="font-size: 0.88rem; line-height: 2.2;">
+                ☐ Check CPL by ad set — flag any above ₹400<br>
+                ☐ Review frequency — pause ad sets above 3.0<br>
+                ☐ Check lead quality from CRM/form responses<br>
+                ☐ Monitor spend pacing — ensure budget is being used<br>
+                ☐ Review any ad rejections or policy flags<br>
+                ☐ Check form completion rate — target above 12%<br>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📊 Weekly Optimization Actions</div>
+            <div style="font-size: 0.88rem; line-height: 2.2;">
+                ☐ Kill ads with CTR below 1.5% after 1,000 impressions<br>
+                ☐ Kill ad sets with CPL above ₹400 after 5+ leads<br>
+                ☐ Scale winning ad sets by 25-30% budget increase<br>
+                ☐ Launch 2-3 new creatives in testing campaign<br>
+                ☐ Move proven winners from Test → Core campaign<br>
+                ☐ Refresh retargeting creatives every 2 weeks<br>
+                ☐ Analyze lead-to-visit conversion by ad set<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top: 20px;">
+        <div class="card-title">🔄 Trigger-Based Rules</div>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Trigger</th>
+                    <th>Condition</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="badge badge-danger">CPL Spike</span></td>
+                    <td>CPL > ₹400 for 3 consecutive days</td>
+                    <td>Pause ad set → Check creative fatigue → Launch fresh creative</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-warning">Low CTR</span></td>
+                    <td>CTR < 1.0% after 2,000 impressions</td>
+                    <td>Pause ad → Replace with new hook/angle</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-success">Winner Found</span></td>
+                    <td>CPL < ₹280 with 10+ leads</td>
+                    <td>Duplicate to Core campaign → Increase budget 30%</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-warning">High Frequency</span></td>
+                    <td>Frequency > 3.5 in any ad set</td>
+                    <td>Expand audience OR pause and refresh creative</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-danger">Junk Leads</span></td>
+                    <td>Lead quality < 25% on any ad set</td>
+                    <td>Switch to Higher Intent form → Tighten targeting</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-info">Budget Unspent</span></td>
+                    <td>Less than 80% daily budget spent</td>
+                    <td>Loosen cost cap → Expand audience → Add placements</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ========== IMPLEMENTATION TIMELINE ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #00b894, #55efc4);">📅</div>
+        <div>
+            <h2>Implementation Timeline</h2>
+            <div class="section-sub">30-day execution roadmap — April 2026</div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item" style="border-left: 3px solid var(--accent);">
+            <div class="timeline-date">Day 0 — April 3 (Setup Day)</div>
+            <div class="timeline-title">Account Restructure & Launch Prep</div>
+            <div class="timeline-desc">
+                ✅ Pause current "Saga LG 16.03.2026" campaign (keep for data)<br>
+                ✅ Set up Meta Pixel / Conversions API for lead tracking<br>
+                ✅ Create 2 instant forms (Standard + Higher Intent)<br>
+                ✅ Build 3 new campaigns with full ad set structure<br>
+                ✅ Upload 6-8 video creatives + 3-4 carousels/images<br>
+                ✅ Set up custom audiences (video viewers, engagers, form openers)<br>
+                ✅ Configure exclusions across campaigns
+            </div>
+        </div>
+
+        <div class="timeline-item" style="border-left: 3px solid var(--gold);">
+            <div class="timeline-date">Days 1–7 — April 3–9 (Learning Phase)</div>
+            <div class="timeline-title">Launch at ₹3,500/day — Algorithm Learning</div>
+            <div class="timeline-desc">
+                🎯 Launch all 3 campaigns simultaneously<br>
+                📊 Monitor but DO NOT make changes for first 3-4 days<br>
+                📝 Track lead quality daily in CRM<br>
+                ⚠️ Only intervene if an ad has 0 leads after ₹1,000 spend
+            </div>
+        </div>
+
+        <div class="timeline-item" style="border-left: 3px solid #0984e3;">
+            <div class="timeline-date">Days 8–14 — April 10–16 (Optimization)</div>
+            <div class="timeline-title">First Optimization Cycle at ₹4,500/day</div>
+            <div class="timeline-desc">
+                🔪 Kill underperforming ads (CTR < 1.5% or CPL > ₹400)<br>
+                📈 Increase budget on winning ad sets by 30%<br>
+                🧪 Launch 3 new creatives in testing campaign<br>
+                📊 Analyze CPL by audience segment — double down on cheapest
+            </div>
+        </div>
+
+        <div class="timeline-item" style="border-left: 3px solid var(--success);">
+            <div class="timeline-date">Days 15–21 — April 17–23 (Scaling)</div>
+            <div class="timeline-title">Scale to ₹5,500/day — Expand Winners</div>
+            <div class="timeline-desc">
+                🚀 Move proven winners from Test → Core campaign<br>
+                🎯 Launch Lookalike audiences from lead data<br>
+                🔄 Refresh retargeting creatives<br>
+                📊 Review lead-to-site-visit conversion rates
+            </div>
+        </div>
+
+        <div class="timeline-item" style="border-left: 3px solid #6c5ce7;">
+            <div class="timeline-date">Days 22–30 — April 24–30 (Full Scale)</div>
+            <div class="timeline-title">Full ₹6,000/day — Performance Mode</div>
+            <div class="timeline-desc">
+                💰 Full budget deployment across proven performers<br>
+                📊 Final CPL optimization — target ₹300-320 blended<br>
+                📝 Prepare May performance report & scaling plan<br>
+                🎬 Brief next month's creative batch based on learnings
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== IMMEDIATE ACTION ITEMS ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-accent);">⚡</div>
+        <div>
+            <h2>Immediate Action Items</h2>
+            <div class="section-sub">Do these BEFORE launching new campaigns</div>
+        </div>
+    </div>
+
+    <div class="grid-2">
+        <div class="card" style="border-left: 4px solid var(--accent);">
+            <div class="card-title">🔴 P0 — Do Today</div>
+            <div style="font-size: 0.88rem; line-height: 2.2;">
+                <strong>1.</strong> Fix lead tracking — Verify Pixel fires on form submit or set up Conversions API<br>
+                <strong>2.</strong> Pause image ad "Ads 1creative" — 0.74% CTR is bleeding budget<br>
+                <strong>3.</strong> Create 2 new instant forms (Standard + Higher Intent)<br>
+                <strong>4.</strong> Produce 4-5 new video creatives (15-20s vertical reels)<br>
+                <strong>5.</strong> Set up custom audiences for retargeting
+            </div>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--gold);">
+            <div class="card-title">🟡 P1 — Do This Week</div>
+            <div style="font-size: 0.88rem; line-height: 2.2;">
+                <strong>1.</strong> Build full 3-campaign structure as outlined above<br>
+                <strong>2.</strong> Set up CRM/lead follow-up process (call within 2 hours)<br>
+                <strong>3.</strong> Create landing page or WhatsApp integration as backup<br>
+                <strong>4.</strong> Set up UTM tracking for all campaigns<br>
+                <strong>5.</strong> Establish weekly reporting cadence
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== KPI TARGETS ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: var(--gradient-gold);">🎯</div>
+        <div>
+            <h2>KPI Targets & Success Metrics</h2>
+            <div class="section-sub">April 2026 benchmarks</div>
+        </div>
+    </div>
+
+    <div class="kpi-grid">
+        <div class="kpi-card green">
+            <div class="kpi-label">Target CPL</div>
+            <div class="kpi-value">₹300-350</div>
+            <div class="kpi-sub">Blended across all campaigns</div>
+        </div>
+        <div class="kpi-card blue">
+            <div class="kpi-label">Target CTR</div>
+            <div class="kpi-value">> 2.5%</div>
+            <div class="kpi-sub">Current: 2.22%</div>
+        </div>
+        <div class="kpi-card gold">
+            <div class="kpi-label">Target CPC</div>
+            <div class="kpi-value">< ₹12</div>
+            <div class="kpi-sub">Current: ₹12.97</div>
+        </div>
+        <div class="kpi-card red">
+            <div class="kpi-label">Max Frequency</div>
+            <div class="kpi-value">< 2.5</div>
+            <div class="kpi-sub">Current: 2.05</div>
+        </div>
+        <div class="kpi-card green">
+            <div class="kpi-label">Monthly Leads</div>
+            <div class="kpi-value">514+</div>
+            <div class="kpi-sub">At ₹1.8L budget</div>
+        </div>
+        <div class="kpi-card blue">
+            <div class="kpi-label">Lead Quality</div>
+            <div class="kpi-value">> 40%</div>
+            <div class="kpi-sub">Qualified / contactable</div>
+        </div>
+        <div class="kpi-card gold">
+            <div class="kpi-label">Site Visits</div>
+            <div class="kpi-value">60-80</div>
+            <div class="kpi-sub">From qualified leads</div>
+        </div>
+        <div class="kpi-card green">
+            <div class="kpi-label">Bookings Target</div>
+            <div class="kpi-value">6-10</div>
+            <div class="kpi-sub">10% of site visits</div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NAMING CONVENTION ========== -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-icon" style="background: linear-gradient(135deg, #636e72, #b2bec3);">🏷️</div>
+        <div>
+            <h2>Naming Conventions</h2>
+            <div class="section-sub">Consistent naming for easy tracking and reporting</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Format</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Campaign</strong></td>
+                    <td>[Project]_[Objective]_[Type]_[Month][Year]</td>
+                    <td>SAGA_LG_Core_Apr26</td>
+                </tr>
+                <tr>
+                    <td><strong>Ad Set</strong></td>
+                    <td>[Project]_[AudienceType]_[Detail]_[Age]_[Gender]</td>
+                    <td>SAGA_INT_RealEstate_2555_All</td>
+                </tr>
+                <tr>
+                    <td><strong>Ad</strong></td>
+                    <td>[Project]_[Format]_[Angle]_[Version]</td>
+                    <td>SAGA_VID_PriceHook_V1</td>
+                </tr>
+                <tr>
+                    <td><strong>UTM Campaign</strong></td>
+                    <td>saga_meta_lg_apr26</td>
+                    <td>?utm_source=meta&utm_medium=paid&utm_campaign=saga_meta_lg_apr26</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<div class="footer">
+    <p style="font-size: 1rem; margin-bottom: 8px;"><strong>THE SAGA — Sriperumbudur</strong> | Meta Ads Plan — April 2026</p>
+    <p>Prepared by <strong>Propshell Performance Marketing</strong> | Data Source: Windsor.ai | Generated: April 2, 2026</p>
+    <p style="margin-top: 12px; opacity: 0.5; font-size: 0.75rem;">*Projections based on current account data and industry benchmarks for Chennai real estate. Actual results may vary based on creative quality, lead follow-up speed, and market conditions.</p>
+</div>
+
+</body>
+</html>
